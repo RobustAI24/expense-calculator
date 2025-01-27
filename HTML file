@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Expense & Budget Calculator</h1>
+        
+        <div class="category">
+            <h2 class="category-title">Add Expense</h2>
+            <div class="input-group">
+                <label for="purpose">Purpose:</label>
+                <select id="purpose">
+                    <option value="household">Household</option>
+                    <option value="business">Business</option>
+                    <option value="school">School</option>
+                    <option value="rent">Rent</option>
+                    <option value="grocery">Grocery</option>
+                    <option value="utility">Utility</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <label for="daily">Daily Expenses:</label>
+                <input type="number" id="daily" placeholder="Enter daily amount">
+            </div>
+            
+            <div class="input-group">
+                <label for="weekly">Weekly Expenses:</label>
+                <input type="number" id="weekly" placeholder="Enter weekly amount">
+            </div>
+            
+            <div class="input-group">
+                <label for="monthly">Monthly Expenses:</label>
+                <input type="number" id="monthly" placeholder="Enter monthly amount">
+            </div>
+            
+            <button onclick="calculateBudget()">Calculate</button>
+        </div>
+
+        <div class="results">
+            <h2>Monthly Budget Summary</h2>
+            <p>Total Household Expenses: $<span id="totalHousehold">0.00</span></p>
+            <p>Total Business Expenses: $<span id="totalBusiness">0.00</span></p>
+            <p>Combined Monthly Total: $<span id="totalMonthly">0.00</span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
